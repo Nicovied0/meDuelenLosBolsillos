@@ -1,31 +1,26 @@
 import React from "react";
 
+
 export default function Dolares({ data }) {
   return (
     <div>
-      <div>
-        <h2>dolar oficial</h2>
-        <img></img>
-        <h3>compra</h3>
-        <h4>$300</h4>
-        <h3>Venta</h3>
-        <h4>$300</h4>
-      </div>
-      <h1>Lista de artículos</h1>
-      {/* {data.map(({ id, title, body }) => (
-        <div key={id}>
-          <h3>{title}</h3>
-          <p>{body}</p>
+      {data.map(({ nombre, venta, compra, fechaActualizacion }) => (
+        <div key={nombre}>
+          <h3>{nombre}</h3>
+          <p>{compra}</p>
+          <p>{venta}</p>
+          <p>{fechaActualizacion}</p>
         </div>
-      ))} */}
-      {console.log(data)}
+      ))}
     </div>
   );
 }
 
 export async function getStaticProps() {
   try {
-    const res = await fetch("https://jsonplaceholder.typicode.com/posts");
+    const res = await fetch(
+      "https://dolar-api-argentina.vercel.app/v1/dolares"
+    );
     const data = await res.json();
     return {
       props: {

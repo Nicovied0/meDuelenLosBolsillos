@@ -1,0 +1,19 @@
+.divDolares {
+  display: flex;
+  flex-direction: row;
+}
+
+.divCaja {
+  display: flex;
+  flex-direction: column;
+  background-color: red;
+  padding: 1rem;
+  margin: 1rem;
+  width: 12rem;
+  min-width: 12rem;
+  min-height: 8rem;
+  border-radius: 1rem;
+  font-family: monospace;
+  align-items: stretch;
+  justify-content: space-evenly;
+}
