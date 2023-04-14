@@ -1,12 +1,12 @@
 .divDolares {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .divCaja {
   display: flex;
   flex-direction: column;
-  background-color: red;
   padding: 1rem;
   margin: 1rem;
   width: 12rem;
@@ -16,4 +16,8 @@
   font-family: monospace;
   align-items: stretch;
   justify-content: space-evenly;
+  box-shadow: var(--chakra-shadows-lg);
+  border-width: 3px;
+  border-color: #276749
+;color: #a0aec0;
 }

@@ -4,6 +4,7 @@ import Layout from "@/Component/Layout";
 import styles from "../styles/index.module.css";
 
 export default function Home({ data }) {
+  let date 
   return (
     <Layout>
       <div>
@@ -15,11 +16,11 @@ export default function Home({ data }) {
         {data.map(({ nombre, venta, compra, fechaActualizacion }) => (
           <div key={nombre} className={styles.divCaja}>
             <div>
-            {/* nombre === "Contado con liquidación" ? <h3>DOLAR Contado con Liqui :<h3>DOLAR {nombre}</h3> */}
-              <h3>DOLAR {nombre}</h3>
-              <p>COMPRA ${compra}</p>
+              {/* nombre === "Contado con liquidación" ? <h3>DOLAR Contado con Liqui :<h3>DOLAR {nombre}</h3> */}
+              <h2>DOLAR {nombre}</h2>
+              <h3>COMPRA ${compra}</h3>
               <hr></hr>
-              <p>VENTA ${venta}</p>
+              <h3>VENTA ${venta}</h3>
             </div>
             {/* <p>{fechaActualizacion}</p> */}
           </div>
@@ -31,6 +32,7 @@ export default function Home({ data }) {
 
 export async function getStaticProps() {
   try {
+    // data = await getDate()
     const res = await fetch(
       "https://dolar-api-argentina.vercel.app/v1/dolares"
     );
