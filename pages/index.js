@@ -4,7 +4,7 @@ import Layout from "@/Component/Layout";
 import styles from "../styles/index.module.css";
 
 export default function Home({ data }) {
-  let date 
+  let date;
   return (
     <Layout>
       <div>
@@ -18,9 +18,12 @@ export default function Home({ data }) {
             <div>
               {/* nombre === "Contado con liquidación" ? <h3>DOLAR Contado con Liqui :<h3>DOLAR {nombre}</h3> */}
               <h2>DOLAR {nombre}</h2>
-              <h3>COMPRA ${compra}</h3>
               <hr></hr>
-              <h3>VENTA ${venta}</h3>
+              <div>
+                <h3>COMPRA ${compra}</h3>
+                <hr></hr>
+                <h3>VENTA ${venta}</h3>
+              </div>
             </div>
             {/* <p>{fechaActualizacion}</p> */}
           </div>

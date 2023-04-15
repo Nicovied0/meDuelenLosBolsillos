@@ -13,17 +13,19 @@ const Layout = ({ children }) => {
         <link rel="icon" href="/img/logo.png" />
       </Head>
       <nav className={styles.nav}>
-        <div className={styles.div1}>
+        <Link href="/" legacyBehavior>
+          <a className={styles.div1}>
+            <Image
+              src="/img/logo.png"
+              className={styles.imagen}
+              alt="imgHome"
+              width={30}
+              height={30}
+            ></Image>
+            <h2 className={styles.h2title}>Cuanto sale?</h2>
+          </a>
+        </Link>
 
-        <Image
-          src="/img/logo.png"
-          className={styles.imagen}
-          alt="imgHome"
-          width={30}
-          height={30}
-        ></Image>
-        <h2>Cuanto sale?</h2>
-        </div>
         <div className={styles.navDiv}>
           <button>
             <Link href="/" legacyBehavior>
