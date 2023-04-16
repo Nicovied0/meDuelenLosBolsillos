@@ -25,6 +25,14 @@
   justify-content: space-around;
 }
 
-.h2title{
+.h2title {
   padding: 1rem
+}
+
+.main {
+  display: flex;
+  padding: 2rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
 }

@@ -32,11 +32,11 @@ const Layout = ({ children }) => {
               <a className={styles.a}>Inicio</a>
             </Link>
           </button>
-          <button>
+          {/* <button>
             <Link href="/about" legacyBehavior>
               <a className={styles.a}>sobre mi</a>
             </Link>
-          </button>
+          </button> */}
           <button>
             <Link href="/plataformas" legacyBehavior>
               <a className={styles.a}>Plataformas</a>
@@ -44,7 +44,7 @@ const Layout = ({ children }) => {
           </button>
         </div>
       </nav>
-      <main>{children}</main>
+      <main className={styles.main}>{children}</main>
       <div>
         <Footer />
       </div>
