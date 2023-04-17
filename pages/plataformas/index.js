@@ -4,7 +4,13 @@ import React from "react";
 const index = () => {
   return (
     <Layout>
-      <div>Netflix</div>
+      <div>Netflix
+        <div>
+          <h2>precio</h2>
+          <h3></h3>
+        </div>
+      </div>
+      
       <div>HBO</div>
       <div>Prime video</div>
       <div>Disney</div>
