@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Layout from "@/Components/Layout";
-// import Dolares from "@/Component/Dolares";
 import styles from "../styles/index.module.css";
 
 export default function Home({ data }) {
