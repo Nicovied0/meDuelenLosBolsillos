@@ -1,0 +1,9 @@
+.divs {
+  position: relative;
+  padding: 25px;
+  margin-bottom: 20px;
+  border: 1px solid rgb(26, 28, 27);
+  background-color: rgb(26, 28, 27);
+  border-radius: 20px;
+  overflow: hidden;
+}

@@ -1,16 +1,28 @@
+import Amazon from "@/Components/Amazon";
+import Hbo from "@/Components/Hbo";
 import Layout from "@/Components/Layout";
+import Netflix from "@/Components/Netflix";
 import React from "react";
+import styles from "../../styles/Plataformas.module.css";
 
 const index = () => {
   return (
     <Layout>
-      <div>Netflix
-        <div>
-          <h2>precio</h2>
-          <h3></h3>
+      <div>
+        <div className={styles.divs}>
+          <Netflix />
+        </div>
+        <div className={styles.divs}>
+          <Hbo />
+        </div>
+        <div className={styles.divs}>
+          <Amazon />
+        </div>
+        <div className={styles.divs}>
+          <Netflix />
         </div>
       </div>
-      
+
       <div>HBO</div>
       <div>Prime video</div>
       <div>Disney</div>

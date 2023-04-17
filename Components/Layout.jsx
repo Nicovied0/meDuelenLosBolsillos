@@ -32,14 +32,14 @@ const Layout = ({ children }) => {
               <a className={styles.a}>Inicio</a>
             </Link>
           </button>
-          {/* <button>
-            <Link href="/about" legacyBehavior>
-              <a className={styles.a}>sobre mi</a>
-            </Link>
-          </button> */}
           <button>
             <Link href="/plataformas" legacyBehavior>
               <a className={styles.a}>Plataformas</a>
+            </Link>
+          </button>
+          <button>
+            <Link href="/calculadora" legacyBehavior>
+              <a className={styles.a}>Calculadora</a>
             </Link>
           </button>
         </div>

@@ -6,20 +6,25 @@ export default function Home({ data }) {
   return (
     <Layout>
       <div>
-        <Image src="/img/1.jpg" height={600} width={600} alt="imgHome" />
-        {/* <div><Dolares></Dolares></div> */}
+        <Image
+          src="/img/1.jpg"
+          height={500}
+          width={500}
+          alt="imgHome"
+          className={styles.Imagen}
+        />
       </div>
-      <h1>Cotizaciones actuales del dólar HOY</h1>
+      <h1 className={styles.h1Text}>Cotizaciones actuales del dólar HOY</h1>
       <div className={styles.divDolares}>
         {data.map(({ nombre, venta, compra, fechaActualizacion }) => (
           <div key={nombre} className={styles.divCaja}>
-            <div>
+            <div className={styles.divCaja2}>
               {/* nombre === "Contado con liquidación" ? <h3>DOLAR Contado con Liqui :<h3>DOLAR {nombre}</h3> */}
               <h2>DOLAR {nombre}</h2>
-              <hr></hr>
-              <div>
+              
+              <div className={styles.divCaja3}>
                 <h3>COMPRA ${compra}</h3>
-                <hr></hr>
+                <hr className={styles.hr}></hr>
                 <h3>VENTA ${venta}</h3>
               </div>
             </div>
