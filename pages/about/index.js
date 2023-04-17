@@ -1,4 +1,4 @@
-import Layout from '@/Component/Layout'
+import Layout from '@/Components/Layout'
 import React from 'react'
 
 const about = () => {

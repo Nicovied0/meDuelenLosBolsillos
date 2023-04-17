@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Layout from "@/Component/Layout";
+import Layout from "@/Components/Layout";
 // import Dolares from "@/Component/Dolares";
 import styles from "../styles/index.module.css";
 
