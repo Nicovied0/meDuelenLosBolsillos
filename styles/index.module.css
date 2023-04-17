@@ -10,7 +10,7 @@
   padding: 1rem;
   margin: 1rem;
   width: 12rem;
-  min-width: 12rem;
+  min-width: 15rem;
   min-height: 8rem;
   border-radius: 1rem;
   font-family: monospace;
@@ -47,4 +47,13 @@
   text-align: center;
   color: #68d391;
   font-weight: revert;
+}
+
+.h2Dolar {
+  font-size: large;
+  font-weight: 700;
+}
+
+.h3dolar {
+  font-weight: 700;
 }

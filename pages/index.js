@@ -14,18 +14,22 @@ export default function Home({ data }) {
           className={styles.Imagen}
         />
       </div>
-      <h1 className={styles.h1Text}>Cotizaciones actuales del dólar HOY</h1>
+      <div>
+        <h1 className={styles.h1Text}>Cotizaciones actuales del dólar HOY</h1>
+        <p>
+          Las cotizaciones se actualizarán automáticamente cada 5 minutos, no es
+          necesario que recargues la página.
+        </p>
+      </div>
       <div className={styles.divDolares}>
         {data.map(({ nombre, venta, compra, fechaActualizacion }) => (
           <div key={nombre} className={styles.divCaja}>
             <div className={styles.divCaja2}>
-              {/* nombre === "Contado con liquidación" ? <h3>DOLAR Contado con Liqui :<h3>DOLAR {nombre}</h3> */}
-              <h2>DOLAR {nombre}</h2>
-              
+              <h2 className={styles.h2Dolar}>DOLAR {nombre}</h2>
               <div className={styles.divCaja3}>
-                <h3>COMPRA ${compra}</h3>
+                <h3 className={styles.h3dolar}>COMPRA ${compra}</h3>
                 <hr className={styles.hr}></hr>
-                <h3>VENTA ${venta}</h3>
+                <h3 className={styles.h3dolar}>VENTA ${venta}</h3>
               </div>
             </div>
             {/* <p>{fechaActualizacion}</p> */}
