@@ -17,7 +17,7 @@ const Layout = ({ children }) => {
           <a className={styles.div1}>
             <Image
               src="/img/logo.png"
-              className={styles.imagen}
+              // className={styles.imagen}
               alt="imgHome"
               width={30}
               height={30}
