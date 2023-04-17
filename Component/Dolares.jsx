@@ -1,7 +1,6 @@
 import React from "react";
 
-
-export default function Dolares({ data }) {
+const Dolares = ({ data }) => {
   return (
     <div>
       {data.map(({ nombre, venta, compra, fechaActualizacion }) => (
@@ -14,7 +13,8 @@ export default function Dolares({ data }) {
       ))}
     </div>
   );
-}
+};
+export default Dolares;
 
 export async function getStaticProps() {
   try {
