@@ -16,18 +16,18 @@ const Dolares = ({ data }) => {
 };
 export default Dolares;
 
-export async function getStaticProps() {
-  try {
-    const res = await fetch(
-      "https://dolar-api-argentina.vercel.app/v1/dolares"
-    );
-    const data = await res.json();
-    return {
-      props: {
-        data,
-      },
-    };
-  } catch (error) {
-    console.log(error);
-  }
-}
+// export async function getStaticProps() {
+//   try {
+//     const res = await fetch(
+//       "https://dolar-api-argentina.vercel.app/v1/dolares"
+//     );
+//     const data = await res.json();
+//     return {
+//       props: {
+//         data,
+//       },
+//     };
+//   } catch (error) {
+//     console.log(error);
+//   }
+// }
