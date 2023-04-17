@@ -1,29 +1,32 @@
 import React from "react";
 import Layout from "@/Components/Layout";
-import { useState } from "react";
+
+import Calculator from "@/Components/Calculator";
 
 const index = ({ data }) => {
-  const [input, setInput] = useState({
-    numero: "",
-  });
-  console.log(input.numero);
+  let info = data;
+  // const [input, setInput] = useState({
+  //   numero: "",
+  // });
+  // console.log(input.numero);
 
-  function handleChange(e) {
-    setInput({
-      ...input,
-      [e.target.name]: e.target.value,
-    });
-  }
-  let calculo = input.numero * data[0].venta;
-  let calculoImpuestos = calculo * 1.75
+  // function handleChange(e) {
+  //   setInput({
+  //     ...input,
+  //     [e.target.name]: e.target.value,
+  //   });
+  // }
+  // let calculo = input.numero * data[0].venta;
+  // let calculoImpuestos = calculo * 1.75
   return (
     <Layout>
-      <div>
+      <Calculator data={info}></Calculator>
+      {/* <div>
         <h2> Ingresa un monto para calcular los impuestos</h2>
         <div>
           <h2>Cotización dólar oficial</h2>
-          <h3>${data[0].venta}</h3>
-          {/* dolar oficial */}
+          <h3>${data[0].venta}</h3> 
+          {/* dolar oficial
         </div>
         <div>
           <input
@@ -36,7 +39,7 @@ const index = ({ data }) => {
           />
         </div>
         <div>
-          {/* <h3>valor ${input.numero}</h3> */}
+          {/* <h3>valor ${input.numero}</h3> 
           <div>
             <h2>Sin impuestos</h2>
             <h3>${calculo}</h3>
@@ -48,7 +51,7 @@ const index = ({ data }) => {
           <h2>Total c/ imp.</h2>
           <h2>${calculoImpuestos}</h2>
         </div>
-      </div>
+      </div> */}
     </Layout>
   );
 };
