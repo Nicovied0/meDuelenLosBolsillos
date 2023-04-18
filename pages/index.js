@@ -16,7 +16,9 @@ export default function Home({ data }) {
       </div>
       <div className={styles.divtxt}>
         <h1 className={styles.h1Text}>Cotizaciones actuales del dólar HOY</h1>
-        <p className={styles.ptxt}>Las cotizaciones se actualizarán automáticamente cada 5 minutos.</p>
+        <p className={styles.ptxt}>
+          Las cotizaciones se actualizarán automáticamente cada 5 minutos.
+        </p>
       </div>
       <div className={styles.divDolares}>
         {data.map(({ nombre, venta, compra }) => (
@@ -52,3 +54,9 @@ export async function getStaticProps() {
     console.log(error);
   }
 }
+
+function updateDolar() {
+  getStaticProps;
+}
+
+setTimeout(() => updateDolar, 300000);

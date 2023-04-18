@@ -34,7 +34,6 @@ const Calculator = (props) => {
           placeholder="Ingrese el monto en dolares"
           value={input.numero}
           onChange={handleChange}
-          defaultValue={1}
           className={styles.input}
         />
       </div>
@@ -51,7 +50,7 @@ const Calculator = (props) => {
           <h2>+ Imp. ganancias (45%)</h2>
         </div>
         <div  className={styles.div4}>
-          {calculoImpuestos == 0 ? <></> : <h2  className={styles.h2Total}>${calculoImpuestos}</h2>}
+          {calculoImpuestos == 0 ? <></> : <h2  className={styles.h2Total}>${calculoImpuestos} ARS</h2>}
         </div>
       </div>
 
