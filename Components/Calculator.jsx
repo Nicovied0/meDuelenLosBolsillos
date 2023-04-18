@@ -1,12 +1,12 @@
 import React from "react";
 import { useState } from "react";
+import styles from "../styles/Calculator.module.css";
 
 const Calculator = (props) => {
   const [input, setInput] = useState({
     numero: "",
   });
   console.log(input.numero);
-
 
   function handleChange(e) {
     setInput({
@@ -16,57 +16,47 @@ const Calculator = (props) => {
   }
   let calculo = input.numero * props.data[0].venta;
   let calculoImpuestos = calculo * 1.75;
+
   return (
-    <div>
-      <h2> Ingresa un monto para calcular los impuestos</h2>
-      <div>
+    <div className={styles.div}>
+      <h1 className={styles.h1}>
+        {" "}
+        Ingresa un monto para calcular los impuestos
+      </h1>
+      <div className={styles.div2}>
         <h2>Cotización dólar oficial</h2>
         <h3>${props.data[0].venta}</h3>
         {/* dolar oficial */}
       </div>
-      <div>
+      <div className={styles.div0}>
         <input
           type="number"
           name="numero"
-          placeholder="10"
+          placeholder="$10"
           value={input.numero}
           onChange={handleChange}
           defaultValue={1}
+          className={styles.input}
         />
       </div>
-      <div>
-        {/* <h3>valor ${input.numero}</h3> */}
-        <div>
+      <div className={styles.div2}>
+        <div className={styles.div3}>
           <h2>Sin impuestos</h2>
-          <h3>${calculo}</h3>
+          {calculo == 0 ? <></> : <h3>${calculo}</h3>}
         </div>
-        <h2>+ Imp. PAIS (30%)</h2>
-        <h2>+ Imp. ganancias (45%)</h2>
       </div>
-      <div>
-        <h2>Total c/ imp.</h2>
-        <h2>${calculoImpuestos}</h2>
+      <div className={styles.div2}>
+        <div>
+          <h2>Total c/ imp.</h2>
+          <h2>+ Imp. PAIS (30%)</h2>
+          <h2>+ Imp. ganancias (45%)</h2>
+        </div>
+        <div  className={styles.div4}>
+          {calculoImpuestos == 0 ? <></> : <h2  className={styles.h2Total}>${calculoImpuestos}</h2>}
+        </div>
       </div>
     </div>
   );
 };
 
 export default Calculator;
-
-// export async function getStaticProps() {
-//   try {
-//     const res = await fetch(
-//       "https://dolar-api-argentina.vercel.app/v1/dolares"
-//     );
-//     const data = await res.json();
-//     // console.log(data[0].venta);
-//     return {
-//       props: {
-//         data,
-//       },
-//     };
-//   } catch (error) {
-//     console.log(error);
-//   }
-// }
-//

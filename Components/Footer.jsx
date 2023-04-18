@@ -19,7 +19,7 @@ const Footer = () => {
             <li className={styles.li}>
               <a href="https://github.com/Nicovied0" target="_blank">
                 <Image
-                  src="/img/github.png"
+                  src="/img/gh.png"
                   alt="imgGithub"
                   width={30}
                   height={30}

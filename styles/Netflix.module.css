@@ -1,0 +1,61 @@
+.div {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 25px;
+  margin-bottom: 20px;
+  border: 1px solid rgb(26, 28, 27);
+  background-color: rgb(26, 28, 27);
+  border-radius: 20px;
+  overflow: hidden;
+  width: 32rem;
+}
+
+.divOn {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid rgb(94, 233, 161);
+  position: relative;
+  padding: 25px;
+  margin-bottom: 20px;
+  /* border: 1px solid rgb(26, 28, 27); */
+  background-color: rgb(26, 28, 27);
+  border-radius: 20px;
+  overflow: hidden;
+  width: 32rem;
+}
+
+.divOns {
+  margin: 0.8rem 0;
+}
+
+.h2large {
+  font-size: larger;
+}
+
+.buttonClose {
+  background: gray;
+  padding: 5px 10px;
+  border-radius: 30px;
+}
+
+.buttonOpen {
+  background: gray;
+  padding: 5px 10px;
+  border-radius: 30px;
+}
+
+.buttonOpen:hover {
+  background: rgb(29, 161, 242)
+}
+.buttonClose:hover {
+  background: #e50914
+}
+
+.div2 {
+  display: flex;
+}
+
+.div3 {
+  border: 1px solid rgb(94, 233, 161);
+}
