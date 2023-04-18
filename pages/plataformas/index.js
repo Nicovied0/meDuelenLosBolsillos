@@ -18,18 +18,14 @@ const index = () => {
         <div className={styles.divs}>
           <Amazon />
         </div>
-        <div className={styles.divs}>
-          <Netflix />
-        </div>
+        
       </div>
 
-      <div>HBO</div>
-      <div>Prime video</div>
+    
       <div>Disney</div>
       <div>Star</div>
       <div>Paramont</div>
       <div>Crunchiroll</div>
-      <div>Netflix</div>
       <div>Youtube</div>
       <div>Spoty</div>
 

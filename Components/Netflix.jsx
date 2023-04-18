@@ -1,5 +1,4 @@
 import React from "react";
-import Leyenda from "./Leyenda";
 import Image from "next/image";
 import { useState } from "react";
 import styles from "../styles/Netflix.module.css";
