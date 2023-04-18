@@ -75,7 +75,7 @@ export async function getStaticProps() {
 }
 
 function updateDolar() {
-  getStaticProps;
+  getStaticProps()
 }
 
 setTimeout(() => updateDolar, 300000);
