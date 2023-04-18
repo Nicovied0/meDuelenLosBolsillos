@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import styles from "../styles/Calculator.module.css";
 
-const Calculator = (props) => {
+const Calculadora = () => {
   const [input, setInput] = useState({
     numero: "",
   });
@@ -14,7 +14,7 @@ const Calculator = (props) => {
       [e.target.name]: e.target.value,
     });
   }
-  let calculo = input.numero * props.data[0].venta;
+  let calculo = input.numero
   let calculoImpuestos = calculo * 1.75;
 
   return (
@@ -22,16 +22,12 @@ const Calculator = (props) => {
       <h1 className={styles.h1}>
         Ingresa un monto para calcular los impuestos
       </h1>
-      <div className={styles.div2}>
-        <h2 className={styles.h2Larger}>Cotización dólar oficial</h2>
-        <h3>${props.data[0].venta}</h3>
-        {/* dolar oficial */}
-      </div>
+      
       <div className={styles.div0}>
         <input
           type="number"
           name="numero"
-          placeholder="Ingrese el monto en dolares"
+          placeholder="Ingrese el monto en pesos"
           value={input.numero}
           onChange={handleChange}
           defaultValue={1}
@@ -50,14 +46,16 @@ const Calculator = (props) => {
           <h2>+ Imp. PAIS (30%)</h2>
           <h2>+ Imp. ganancias (45%)</h2>
         </div>
-        <div  className={styles.div4}>
-          {calculoImpuestos == 0 ? <></> : <h2  className={styles.h2Total}>${calculoImpuestos}</h2>}
+        <div className={styles.div4}>
+          {calculoImpuestos == 0 ? (
+            <></>
+          ) : (
+            <h2 className={styles.h2Total}>${calculoImpuestos} ARS</h2>
+          )}
         </div>
       </div>
-
-   
     </div>
   );
 };
 
-export default Calculator;
+export default Calculadora;
