@@ -1,8 +1,12 @@
 import Image from "next/image";
 import Layout from "@/Components/Layout";
 import styles from "../styles/index.module.css";
+import Dolares from "@/Components/Dolares";
+// import { getStaticProps } from "../pages/function";
 
 export default function Home({ data }) {
+  // let data = getStaticProps() ;
+  // console.log(data)
   return (
     <Layout>
       <div>
@@ -21,49 +25,14 @@ export default function Home({ data }) {
         </p>
       </div>
 
-      {data === data ? (
-        <div className={styles.divDolares}>
-          {data.map(({ nombre, venta, compra }) => (
-            <div key={nombre} className={styles.divCaja}>
-              <div className={styles.divCaja2}>
-                <h2 className={styles.h2Dolar}>DOLAR {nombre}</h2>
-                <div className={styles.divCaja3}>
-                  <h3 className={styles.h3dolar}>COMPRA ${compra}</h3>
-                  <hr className={styles.hr}></hr>
-                  <h3 className={styles.h3dolar}>VENTA ${venta}</h3>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      ) : (
-        // <div className={styles.divDolares}>
-        //   {data.map(({ nombre, venta, compra }) => (
-        //     <div key={nombre} className={styles.divCaja}>
-        //       <div className={styles.divCaja2}>
-        //         <h2 className={styles.h2Dolar}>DOLAR {nombre}</h2>
-        //         <div className={styles.divCaja3}>
-        //           <h3 className={styles.h3dolar}>COMPRA ${compra}</h3>
-        //           <hr className={styles.hr}></hr>
-        //           <h3 className={styles.h3dolar}>VENTA ${venta}</h3>
-        //         </div>
-        //       </div>
-        //     </div>
-        //   ))}
-        // </div>
-        <h2>adsasd</h2>
-      )}
+      <Dolares data={data} />
     </Layout>
   );
 }
 
 export async function getStaticProps() {
   try {
-    // data = await getDate()
-    const res = await fetch(
-      "https://dolar-api-argentina.vercel.app/v1/dolares"
-    );
-    let data = await res.json();
+    let data = await fun();
     return {
       props: {
         data,
@@ -74,8 +43,15 @@ export async function getStaticProps() {
   }
 }
 
-function updateDolar() {
-  getStaticProps()
+export async function fun() {
+  try {
+    let res = await fetch("https://dolar-api-argentina.vercel.app/v1/dolares");
+    let data = await res.json();
+    // console.log(data, "soy data");
+    return data;
+  } catch (error) {
+    console.log(error);
+  }
 }
 
-setTimeout(() => updateDolar, 300000);
+setInterval(fun, 300000);

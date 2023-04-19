@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <footer class="footer">
+    <footer >
       <div className={styles.divGeneral}>
         <div>
           <p>
