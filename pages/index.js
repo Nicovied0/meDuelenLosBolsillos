@@ -30,9 +30,10 @@ export default function Home({ data }) {
   );
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   try {
-    let data = await fun();
+    let res = await fetch("http://localhost:8000/dollars");
+    let data = await res.json();
     return {
       props: {
         data,
@@ -43,15 +44,15 @@ export async function getStaticProps() {
   }
 }
 
-export async function fun() {
-  try {
-    let res = await fetch("https://dolar-api-argentina.vercel.app/v1/dolares");
-    let data = await res.json();
-    // console.log(data, "soy data");
-    return data;
-  } catch (error) {
-    console.log(error);
-  }
-}
+// export async function fun() {
+//   try {
+//     let res = await fetch("http://localhost:8000/dollars");
+//     let data = await res.json();
+//     // console.log(data, "soy data");
+//     return data;
+//   } catch (error) {
+//     console.log(error);
+//   }
+// }
 
-setInterval(fun, 300000);
+// setInterval(fun, 300000);
