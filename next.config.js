@@ -3,4 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
 }
 
-module.exports = nextConfig
+module.exports = {
+  images: {domains: ['cryptoicons.org', 'cryptologos.cc'],
+  },
+};
